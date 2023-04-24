@@ -58,7 +58,7 @@ useEffect(() => {
            <div className='item-content'>
              <li key={item.episode_id}>
               <h2 className='title'>{item.title}</h2>
-              <p className='release-date'>{item.release_date}</p>
+              <p className='release-date'>{new Date(item.release_date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
               <p className='opening-crawl'>{item.opening_crawl}</p>
               <a href="#more">More info</a>
             </li>
